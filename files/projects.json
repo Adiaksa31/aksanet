@@ -1,0 +1,82 @@
+[
+    {
+        "title": {
+            "en": "Online Invitation",
+            "id": "Undangan Online"
+        },
+        "image": "img/undangan.png",
+        "description": {
+            "en": "A digital platform to create and manage online invitations with interactive features.",
+            "id": "Sebuah platform digital untuk membuat dan mengelola undangan online dengan fitur interaktif."
+        },
+        "technology": [
+            { "name": "HTML", "icon": "fa-brands fa-html5" },
+            { "name": "Tailwind CSS", "icon": "fa-brands fa-css3-alt" },
+            { "name": "JavaScript", "icon": "fa-brands fa-js" }
+        ]
+    },
+    {
+        "title": {
+            "en": "Company Profile",
+            "id": "Profile Perusahaan"
+        },
+        "image": "img/company.JPG",
+        "description": {
+            "en": "A company profile website that displays company information professionally.",
+            "id": "Website Profile Perusahaan yang menampilkan informasi perusahaan secara profesional."
+        },
+        "technology": [
+            { "name": "Laravel", "icon": "fa-brands fa-laravel" },
+            { "name": "Tailwind CSS", "icon": "fa-brands fa-css3-alt" },
+            { "name": "JavaScript", "icon": "fa-brands fa-js" }
+        ]
+    },
+    {
+        "title": {
+            "en": "Purchase Orders System",
+            "id": "Sistem Purchase Orders"
+        },
+        "image": "img/po.jpg",
+        "description": {
+            "en": "A web-based application to manage the purchasing process efficiently.",
+            "id": "Aplikasi berbasis web untuk mengelola proses pembelian barang secara efisien."
+        },
+        "technology": [
+            { "name": "Laravel", "icon": "fa-brands fa-laravel" },
+            { "name": "JavaScript", "icon": "fa-brands fa-js" },
+            { "name": "RESTful API", "icon": "fa-solid fa-plug" }
+        ]
+    },
+    {
+        "title": {
+            "en": "Admin Back System",
+            "id": "Sistem Back Admin"
+        },
+        "image": "img/admin.png",
+        "description": {
+            "en": "An administration dashboard for managing data and users in a web-based application.",
+            "id": "Dashboard administrasi untuk manajemen data dan pengguna dalam aplikasi berbasis web."
+        },
+        "technology": [
+            { "name": "Laravel", "icon": "fa-brands fa-laravel" },
+            { "name": "Bootstrap 5", "icon": "fa-brands fa-bootstrap" },
+            { "name": "JavaScript", "icon": "fa-brands fa-js" }
+        ]
+    },
+    {
+        "title": {
+            "en": "Crowdfunding System Design",
+            "id": "Desain Sistem Crowd Funding"
+        },
+        "image": "img/cf.jpg",
+        "description": {
+            "en": "Designing a crowdfunding system that allows users to create campaigns and receive donations transparently.",
+            "id": "Perancangan sistem crowdfunding yang memungkinkan pengguna untuk membuat kampanye dan menerima donasi secara transparan."
+        },
+        "technology": [
+            { "name": "Laravel", "icon": "fa-brands fa-laravel" },
+            { "name": "Bootstrap 5", "icon": "fa-brands fa-bootstrap" },
+            { "name": "JavaScript", "icon": "fa-brands fa-js" }
+        ]
+    }
+]

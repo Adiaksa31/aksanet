@@ -1,250 +1,590 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Meta Tags Dasar -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
+    <title>AksaVisual || Portfolio</title>
 
-    <!-- Meta Title -->
-    <title>AksaVisual. </title>
+     <!-- Meta Icon -->
+     <link rel="icon" href="img/Logo AV putih.png">
+     <!-- iOS App Icon -->
+     <link rel="apple-touch-icon" href="img/Logo AV putih.png">
+ 
+     <!-- Meta Description -->
+     <meta name="description" content="Buat undangan online digital untuk berbagai acara seperti pernikahan, ulang tahun, dan lainnya. Pilih dari berbagai template dan kirim undangan Anda secara online dengan cepat.">
+     <!-- Meta Keywords -->
+     <meta name="keywords" content="undangan online, undangan digital, undangan pernikahan, undangan ulang tahun, buat undangan online, kirim undangan digital, template undangan online">
+ 
+     <!-- Open Graph Meta Tags untuk Media Sosial -->
+     <meta property="og:title" content="Undangan Online - Buat Undangan Digital dengan Mudah dan Cepat">
+     <meta property="og:description" content="Buat undangan online digital untuk berbagai acara seperti pernikahan, ulang tahun, dan lainnya. Pilih dari berbagai template dan kirim undangan Anda secara online dengan cepat.">
+     <meta property="og:image" content="https://aksavisual.my.id">
+     <meta property="og:url" content="https://aksavisual.my.id">
+     <meta property="og:type" content="website">
+ 
+     <!-- iOS Web App Settings -->
+     <meta name="apple-mobile-web-app-capable" content="yes">
+     <meta name="apple-mobile-web-app-status-bar-style" content="black">
+     <meta name="apple-mobile-web-app-title" content="Undangan Online">
 
-    <!-- Meta Icon -->
-    <link rel="icon" href="img/Logo AV putih.png">
-    <!-- iOS App Icon -->
-    <link rel="apple-touch-icon" href="img/Logo AV putih.png">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Meta Description -->
-    <meta name="description" content="Buat undangan online digital untuk berbagai acara seperti pernikahan, ulang tahun, dan lainnya. Pilih dari berbagai template dan kirim undangan Anda secara online dengan cepat.">
-    <!-- Meta Keywords -->
-    <meta name="keywords" content="undangan online, undangan digital, undangan pernikahan, undangan ulang tahun, buat undangan online, kirim undangan digital, template undangan online">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-    <!-- Open Graph Meta Tags untuk Media Sosial -->
-    <meta property="og:title" content="Undangan Online - Buat Undangan Digital dengan Mudah dan Cepat">
-    <meta property="og:description" content="Buat undangan online digital untuk berbagai acara seperti pernikahan, ulang tahun, dan lainnya. Pilih dari berbagai template dan kirim undangan Anda secara online dengan cepat.">
-    <meta property="og:image" content="https://aksavisual.my.id">
-    <meta property="og:url" content="https://aksavisual.my.id">
-    <meta property="og:type" content="website">
+    <!-- Particle JS -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-    <!-- iOS Web App Settings -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Undangan Online">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@400;700&display=swap"
+        rel="stylesheet">
 
-    <!-- Tailwind Css Cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
-    <style>
-        body {
-          font-family: 'Concert One', cursive;
-        }
-    </style>
-    <!-- Icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link href="styles/index.css" rel="stylesheet">
 
-
-    <!-- Tailwind Css -->
-    <link href="src/output.css" rel="stylesheet">
-    <!-- Global Css -->
-    <link href="src/global.css" rel="stylesheet">
-
-   
-    <!-- Css -->
-    <style>
-      .animate-click {
-          transition: transform 0.1s ease-in-out;
-      }
-      .animate-click:active {
-          transform: scale(0.95);
-      }
-      #navbar {
-        backdrop-filter: none; /* No blur by default */
-        background-color: transparent;
-      }
-
-      /* Blur effect when scrolled */
-      #navbar.blurred {
-        backdrop-filter: blur(3px); /* Apply blur effect */
-        background-color: transparent;
-      }
-      .group:hover .nav-link {
-        color:#3b82f6;
-      }
-      .group:hover #arrow-icon {
-        transform: rotate(180deg);
-      }
-      .group:hover #dropdownMenu {
-        display: block;
-        opacity: 1;
-        transition-delay: 0.1s; /* Delay when showing the dropdown */
-      }
-
-      #dropdownMenu {
-        display: block;
-        opacity: 0;
-        transition: opacity 0.3s ease-in-out; /* Smooth transition effect */
-        transition-delay: 0.3s; /* Delay before hiding the dropdown */
-      }
-    </style>
 </head>
-<body class="bg-gray-900">
-  <!-- navbar -->
-  <nav id="navbar" class="bg-transparent fixed w-full z-10 transition duration-300">
-    <div class="container mx-auto flex items-center justify-between pt-5 pb-2 px-5 md:px-20">
-      <a href="#" class="flex items-center">
-        <img src="img/Logo AV putih.png" alt="Logo" class="w-8">
-        <span class="text-white ml-2 text-lg font-semibold hover:text-blue-500">AksaVisual<span class="text-blue-500 hover:text-white">.</span></span>
-      </a>
-      <div class="md:hidden">
-        <button id="menu-button" class="text-white focus:outline-none">
-        <i id="menu-icon" class="fa-solid fa-bars text-lg"></i>
+
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
+    <!-- Particle Background -->
+    <div id="particles-js" class="fixed inset-0 z-0"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-transparent">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <div class="text-2xl font-bold">AksaVisual</div>
+
+            <div id="langSelector" class="relative">
+                <!-- Dropdown Button -->
+                <button id="dropdownButton" class="flex items-center space-x-2">
+                    <img id="selectedFlag" src="https://flagcdn.com/w40/us.png" class="w-6 h-4" alt="Selected Flag">
+                    <span id="selectedLanguage" class="hidden">English</span>
+                </button>
+            
+                <!-- Dropdown Menu -->
+                <div id="dropdownMenu" class="absolute left-0 mt-2 bg-white shadow-lg rounded-lg w-36 p-2 hidden text-black">
+                    <button class="language-option flex items-center space-x-2 px-4 py-2 hover:bg-gray-100 w-full" data-lang="en">
+                        <img src="https://flagcdn.com/w40/us.png" class="w-6 h-4" alt="US Flag"> <span class="mx-2"> English</span>
+                    </button>
+                    <button class="language-option flex items-center space-x-2 px-4 py-2 hover:bg-gray-100 w-full" data-lang="id">
+                        <img src="https://flagcdn.com/w40/id.png" class="w-6 h-4" alt="ID Flag"> <span class="mx-2"> Indonesia</span>
+                    </button>
+                </div>
+            </div>           
+
+            <!-- Hamburger Button (Mobile) -->
+            <button id="mobile-menu-toggle" class="md:hidden focus:outline-none">
+                <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+                <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+
+            <!-- Desktop Menu -->
+            <div id="desktop-menu" class="hidden md:flex space-x-4">
+                <a data-translate="home" href="#home" class="nav-link relative group" data-section="home">
+                    Home
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a data-translate="about" href="#about" class="nav-link relative group" data-section="about">
+                    About
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a data-translate="skills" href="#skills" class="nav-link relative group" data-section="skills">
+                    Skills
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a data-translate="projects" href="#projects" class="nav-link relative group" data-section="projects">
+                    Projects
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a data-translate="ai_assistant" href="game&ai_assistant.html" class="nav-link relative group" target="_blank">
+                    AI Assistant & Game
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu"
+                class="fixed top-16 left-0 w-full bg-black/90 md:hidden transform -translate-x-full transition-transform duration-300 ease-in-out">
+                <div class="flex flex-col items-center space-y-4 p-6">
+                    <a data-translate="home" href="#home" class="mobile-nav-link" data-section="home">Home</a>
+                    <a data-translate="about" href="#about" class="mobile-nav-link" data-section="about">About</a>
+                    <a data-translate="skills" href="#skills" class="mobile-nav-link" data-section="skills">Skills</a>
+                    <a data-translate="projects" href="#projects" class="mobile-nav-link" data-section="projects">Projects</a>
+                    <a data-translate="ai_assistant" href="game&ai_assistant.html" class="mobile-nav-link">AI Assistant & Game</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="min-h-screen flex items-center relative z-10 py-20 xl:py-0">
+        <div class="container mx-auto px-4 grid xl:grid-cols-2 gap-10 items-center xl:-mt-20">
+            <div class="space-y-6 text-center xl:text-left animate__animated animate__fadeInLeft order-2 xl:order-1">
+                <h1 class="text-3xl xl:text-5xl font-bold">
+                    <span class="animate__animated animate__rubberBand animate__infinite animate__slower">Adiaksa
+                        Widya</span>
+                </h1>
+                <p class="text-xl xl:text-3xl text-gray-300 animate__animated animate__repeat-3"
+                    data-text="Junior Web Developer">
+                    Junior Web Developer
+                </p>
+                <p data-translate="welcome_message">Hai👋, saya seorang Web Developer dengan pengalaman di dunia IT selama 1-2 tahun. Saya siap membantu membangun solusi digital yang inovatif dan responsif. Mari ciptakan sesuatu yang luar biasa bersama!</p>
+                <div
+                    class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center xl:justify-start">
+                    <a data-translate="download_cv" href="files/cv.pdf" download="Kadek Adiaksa Widya Putra_CV.pdf" class="bg-blue-600 px-6 py-3 rounded-full hover:bg-blue-700 transition text-center">
+                       
+                    </a>
+                    <a data-translate="contact_whatsapp" href="https://wa.me/628"
+                    class="border border-white px-6 py-3 rounded-full hover:bg-white hover:text-black transition text-center"
+                    target="_blank">
+                   
+                    </a>
+                </div>
+            </div>
+            <div class="flex justify-center animate__animated animate__fadeInRight order-1 xl:order-2">
+                <div class="relative w-56 h-56 xl:w-80 xl:h-80 group">
+                    <div
+                        class="absolute inset-0 bg-blue-500 rounded-full transform -rotate-45 group-hover:rotate-0 transition-transform duration-700 ease-in-out opacity-50 blur-lg">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-purple-500 rounded-full transform rotate-45 group-hover:-rotate-0 transition-transform duration-700 ease-in-out opacity-50 blur-lg">
+                    </div>
+                    <div class="relative w-full h-full rounded-full overflow-hidden border-4 border-blue-500 
+                        shadow-2xl 
+                        transform 
+                        transition-all 
+                        duration-500 
+                        group-hover:scale-105 
+                        group-hover:rotate-6 
+                        hover:shadow-blue-500/50">
+                        <img src="img/image.png" class="w-full h-full object-cover 
+                            filter 
+                            
+                            group-hover:grayscale-0 
+                            transition-all 
+                            duration-500 
+                            ease-in-out 
+                            hover:brightness-110" alt="Profile Picture">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black opacity-50">
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 flex justify-center">
+                        <div
+                            class="bg-blue-500/70 px-4 py-2 rounded-full text-white text-xs xl:text-sm animate__animated animate__bounceIn animate__delay-2s">
+                            Junior Web Developer
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="overflow-hidden bg-gray-900 py-4 md:-mt-24">
+        <div class="marquee-wrapper">
+            <div class="marquee">
+                <div class="tech-icon"><i class="fab fa-php text-white text-3xl"></i><span class="tech-tooltip">PHP</span></div>
+                <div class="tech-icon"><i class="fab fa-laravel text-white text-3xl"></i><span class="tech-tooltip">Laravel</span></div>
+                <div class="tech-icon"><i class="fab fa-js text-white text-3xl"></i><span class="tech-tooltip">JavaScript</span></div>
+                <div class="tech-icon"><i class="fab fa-html5 text-white text-3xl"></i><span class="tech-tooltip">HTML</span></div>
+                <div class="tech-icon"><i class="fab fa-css3-alt text-white text-3xl"></i><span class="tech-tooltip">CSS</span></div>
+                <div class="tech-icon"><i class="fab fa-bootstrap text-white text-3xl"></i><span class="tech-tooltip">Bootstrap</span></div>
+                <div class="tech-icon"><i class="fab fa-react text-white text-3xl"></i><span class="tech-tooltip">React</span></div>
+                <div class="tech-icon"><i class="fab fa-node-js text-white text-3xl"></i><span class="tech-tooltip">Node.js</span></div>
+                <div class="tech-icon"><i class="fas fa-database text-white text-3xl"></i><span class="tech-tooltip">MySQL</span></div>
+                <div class="tech-icon"><i class="fab fa-git text-white text-3xl"></i><span class="tech-tooltip">Git</span></div>
+                <div class="tech-icon"><i class="fab fa-github text-white text-3xl"></i><span class="tech-tooltip">GitHub</span></div>
+                <div class="tech-icon"><i class="fab fa-php text-white text-3xl"></i><span class="tech-tooltip">PHP</span></div>
+                <div class="tech-icon"><i class="fab fa-laravel text-white text-3xl"></i><span class="tech-tooltip">Laravel</span></div>
+                <div class="tech-icon"><i class="fab fa-js text-white text-3xl"></i><span class="tech-tooltip">JavaScript</span></div>
+                <div class="tech-icon"><i class="fab fa-html5 text-white text-3xl"></i><span class="tech-tooltip">HTML</span></div>
+                <div class="tech-icon"><i class="fab fa-css3-alt text-white text-3xl"></i><span class="tech-tooltip">CSS</span></div>
+                <div class="tech-icon"><i class="fab fa-bootstrap text-white text-3xl"></i><span class="tech-tooltip">Bootstrap</span></div>
+                <div class="tech-icon"><i class="fab fa-react text-white text-3xl"></i><span class="tech-tooltip">React</span></div>
+                <div class="tech-icon"><i class="fab fa-node-js text-white text-3xl"></i><span class="tech-tooltip">Node.js</span></div>
+                <div class="tech-icon"><i class="fas fa-database text-white text-3xl"></i><span class="tech-tooltip">MySQL</span></div>
+                <div class="tech-icon"><i class="fab fa-git text-white text-3xl"></i><span class="tech-tooltip">Git</span></div>
+                <div class="tech-icon"><i class="fab fa-github text-white text-3xl"></i><span class="tech-tooltip">GitHub</span></div>
+                <div class="tech-icon"><i class="fab fa-php text-white text-3xl"></i><span class="tech-tooltip">PHP</span></div>
+                <div class="tech-icon"><i class="fab fa-laravel text-white text-3xl"></i><span class="tech-tooltip">Laravel</span></div>
+                <div class="tech-icon"><i class="fab fa-js text-white text-3xl"></i><span class="tech-tooltip">JavaScript</span></div>
+                <div class="tech-icon"><i class="fab fa-html5 text-white text-3xl"></i><span class="tech-tooltip">HTML</span></div>
+                <div class="tech-icon"><i class="fab fa-css3-alt text-white text-3xl"></i><span class="tech-tooltip">CSS</span></div>
+                <div class="tech-icon"><i class="fab fa-bootstrap text-white text-3xl"></i><span class="tech-tooltip">Bootstrap</span></div>
+                <div class="tech-icon"><i class="fab fa-react text-white text-3xl"></i><span class="tech-tooltip">React</span></div>
+                <div class="tech-icon"><i class="fab fa-node-js text-white text-3xl"></i><span class="tech-tooltip">Node.js</span></div>
+                <div class="tech-icon"><i class="fas fa-database text-white text-3xl"></i><span class="tech-tooltip">MySQL</span></div>
+                <div class="tech-icon"><i class="fab fa-git text-white text-3xl"></i><span class="tech-tooltip">Git</span></div>
+                <div class="tech-icon"><i class="fab fa-github text-white text-3xl"></i><span class="tech-tooltip">GitHub</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="px-4 py-20 flex items-center bg-gray-900/50 backdrop-blur-sm">
+        <div class="container mx-auto">
+            <h2 data-translate="about_me" class="text-4xl font-bold text-center text-white mb-4">
+       
+            </h2>
+            <br>
+            <div class="grid md:grid-cols-1 gap-10 items-center">
+                <div class="space-y-6 animate__animated animate__fadeInLeft">
+                    <p data-translate="desc_about" class="text-md text-center">
+                       
+                    </p>
+                    <!-- <div class="grid grid-cols-2 gap-4 text-center md:text-left">
+                        <div>
+                            <h3 class="text-2xl font-bold text-blue-500">1-2</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-blue-500">3</h3>
+                            <p>Portofolio</p>
+                        </div>
+                    </div> -->
+                </div>
+                <!-- <div class="animate__animated animate__fadeInRight">
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h4 class="text-2xl mb-4">Personal</h4>
+                        <div class="space-y-3 mx-2">
+                            <div>
+                                <div class="flex justify-between">
+                                    <span>Web Development</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 h-2 rounded-full">
+                                    <div class="bg-blue-500 h-2 rounded-full w-[90%]"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between">
+                                    <span>Komunikasi</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 h-2 rounded-full">
+                                    <div class="bg-blue-500 h-2 rounded-full w-[80%]"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between">
+                                    <span>Team work</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 h-2 rounded-full">
+                                    <div class="bg-blue-500 h-2 rounded-full w-[90%]"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between">
+                                    <span>Positife vibes</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 h-2 rounded-full">
+                                    <div class="bg-blue-500 h-2 rounded-full w-[85%]"></div>
+                                </div>
+                            </div>
+                          
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 px-4">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 data-translate="my_skills" class="text-4xl font-bold text-white mb-4">
+                    
+                </h2>
+                <p data-translate="desc_skills" class="text-gray-400 max-w-2xl mx-auto">
+                   
+                </p>
+            </div>
+
+            <!-- Skills Grid -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Technical Skills -->
+                <div class="bg-gray-800 p-4 rounded-xl transform transition hover:scale-105 hover:shadow-2xl">
+                    <div class="flex items-center mb-6">
+                        <svg class="w-12 h-12 text-blue-500 mr-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 4c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm0 14c-2.74 0-5.14-1.39-6.54-3.5C7.98 15.1 9.87 16 12 16s4.02-.9 5.54-2.5C17.14 15.61 14.74 17 12 17z" />
+                        </svg>
+                        <h3 data-translate="item_1" class="text-2xl font-semibold text-white">Technical Skills</h3>
+                    </div>
+                    <div class="space-y-3 mx-2">
+                        <!-- Skill 1 -->
+                        <div>
+                            <div class="flex justify-between">
+                                <span class="text-white">HTML</span>
+                                <span class="text-blue-500">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
+                                <div class="bg-blue-500 h-2 rounded-full animate-loading" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <!-- Skill 2 -->
+                        <div>
+                            <div class="flex justify-between">
+                                <span class="text-white">CSS</span>
+                                <span class="text-blue-500">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
+                                <div class="bg-blue-500 h-2 rounded-full animate-loading" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <!-- Skill 3 -->
+                        <div>
+                            <div class="flex justify-between">
+                                <span class="text-white">JavaScript</span>
+                                <span class="text-blue-500">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
+                                <div class="bg-blue-500 h-2 rounded-full animate-loading" style="width: 80%"></div>
+                            </div>
+                        </div>
+                         <!-- Skill 4 -->
+                         <div>
+                            <div class="flex justify-between">
+                                <span class="text-white">PHP</span>
+                                <span class="text-blue-500">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
+                                <div class="bg-blue-500 h-2 rounded-full animate-loading" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <!-- Skill 4 -->
+                        <div>
+                            <div class="flex justify-between">
+                                <span class="text-white">MYSQL</span>
+                                <span class="text-blue-500">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
+                                <div class="bg-blue-500 h-2 rounded-full animate-loading" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Skills -->
+                <div class="bg-gray-800 p-4 rounded-xl transform transition hover:scale-105 hover:shadow-2xl">
+                    <div class="flex items-center mb-6">
+                        <svg class="w-12 h-12 text-green-500 mr-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z" />
+                        </svg>
+                        <h3 data-translate="item_2" class="text-2xl font-semibold text-white">Professional Skills</h3>
+                    </div>
+                    <div class="relative w-64 h-64 mx-auto">
+                        <canvas id="professionalSkillsChart" width="256" height="256"></canvas>
+                    </div>
+                </div>
+
+                <!-- Tools & Technologies -->
+                <div class="bg-gray-800 p-4 rounded-xl transform transition hover:scale-105 hover:shadow-2xl">
+                    <div class="flex items-center mb-6">
+                        <svg class="w-12 h-12 text-purple-500 mr-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M21 3h-8v6h8V3zm-2 4h-4V5h4v2zM9 3H3v10h8V7H9V3zM7 9H5V5h2v4zm14 4h-8v6h8v-6zm-2 4h-4v-2h4v2zM9 13H3v6h8v-4H9v-2zM7 19H5v-2h2v2z" />
+                        </svg>
+                        <h3 data-translate="item_3" class="text-2xl font-semibold text-white">Tools & Technologies</h3>
+                    </div>
+                    <div class="grid grid-cols-4 gap-4 text-center">
+                        <div class="tech-icon group">
+                            <i class="fab fa-php"></i>
+                            <span class="tech-tooltip">PHP</span>
+                        </div>
+                        <div class="tech-icon group">
+                            <i class="fab fa-laravel"></i>
+                            <span class="tech-tooltip">Laravel</span>
+                        </div>
+                        <div class="tech-icon group">
+                            <i class="fab fa-js"></i>
+                            <span class="tech-tooltip">JavaScript</span>
+                        </div>
+                        <div class="tech-icon group">
+                            <i class="fab fa-html5"></i>
+                            <span class="tech-tooltip">HTML</span>
+                        </div>
+                        <div class="tech-icon group">
+                            <i class="fab fa-css3-alt"></i>
+                            <span class="tech-tooltip">CSS</span>
+                        </div>
+                        <div class="tech-icon group">
+                            <i class="fab fa-bootstrap"></i>
+                            <span class="tech-tooltip">Bootstrap</span>
+                        </div>
+                        <div class="tech-icon group">
+                            <i class="fab fa-css3"></i>
+                            <span class="tech-tooltip">Tailwind CSS</span>
+                        </div>
+                        <div class="tech-icon group">
+                            <i class="fab fa-react"></i>
+                            <span class="tech-tooltip">React</span>
+                        </div>
+                        <div class="tech-icon group">
+                            <i class="fab fa-node-js"></i>
+                            <span class="tech-tooltip">Node.js</span>
+                        </div>
+                        <div class="tech-icon group">
+                            <i class="fas fa-database"></i>
+                            <span class="tech-tooltip">MySQL</span>
+                        </div>
+                        <div class="tech-icon group">
+                            <i class="fas fa-server"></i>
+                            <span class="tech-tooltip">XAMPP</span>
+                        </div>
+                        <div class="tech-icon group">
+                            <i class="fab fa-git"></i>
+                            <span class="tech-tooltip">Git</span>
+                        </div>
+                        <div class="tech-icon group">
+                            <i class="fab fa-aws"></i>
+                            <span class="tech-tooltip">AWS</span>
+                        </div>
+                        <div class="tech-icon group">
+                            <i class="fab fa-figma"></i>
+                            <span class="tech-tooltip">Figma</span>
+                        </div>
+                        <div class="tech-icon group">
+                            <i class="fab fa-linux"></i>
+                            <span class="tech-tooltip">Linux</span>
+                        </div>
+                        <div class="tech-icon group">
+                            <i class="fab fa-npm"></i>
+                            <span class="tech-tooltip">NPM</span>
+                        </div>
+                        <div class="tech-icon group">
+                            <i class="fab fa-python"></i>
+                            <span class="tech-tooltip">Python</span>
+                        </div>
+                        <div class="tech-icon group">
+                            <i class="fab fa-github"></i>
+                            <span class="tech-tooltip">GitHub</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects"
+        class="px-4 py-20 flex items-center bg-gray-900/50 backdrop-blur-sm relative overflow-hidden">
+        <!-- Subtle Background Particles -->
+        <div class="absolute inset-0 opacity-20 pointer-events-none">
+            <div class="absolute animate-pulse bg-blue-500 rounded-full w-32 h-32 top-20 left-20 blur-2xl"></div>
+            <div class="absolute animate-pulse bg-purple-500 rounded-full w-48 h-48 bottom-20 right-20 blur-2xl"></div>
+        </div>
+
+        <div class="container mx-auto relative z-10">
+            <div class="text-center mb-16">
+                <h2 data-translate="my_portofolio" class="text-4xl font-bold text-center text-white mb-4">
+                    My <span class="text-blue-500">Projects</span>
+                </h2>
+                <p data-translate="desc_porto" class="text-gray-400 max-w-2xl mx-auto">
+                    Innovative solutions that blend creativity, technology, and design
+                </p>
+            </div>
+
+            <div id="projectCards" class="grid md:grid-cols-3 gap-8 p-8"></div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+
+    <div id="projectModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white rounded-lg p-6 max-w-lg mx-4">
+            <img id="modalImage" class="w-full h-64 object-cover rounded-md mb-4" alt="Project Detail">
+            <h2 id="modalTitle" class="text-2xl font-bold text-gray-700 mb-2"></h2>
+            <p id="modalDescription" class="text-gray-700 mb-4"></p>
+            <div id="modalTechnology" class="text-gray-700"></div>
+    
+            <!-- Tombol Close di pojok kanan bawah dalam layout -->
+            <div class="flex justify-end mt-4">
+                <button id="closeModal" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-gray-300 transition">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Charbot Button -->
+    <div id="chatbot-trigger" class="fixed bottom-6 right-6 z-[9999999]">
+        <button class="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
         </button>
-      </div>
-      <div class="hidden md:flex md:items-center md:space-x-8">
-        <a href="#home" class="nav-link text-white hover:text-blue-500">Home</a>
-        <a href="#blog" class="nav-link text-white hover:text-blue-500">Blog</a>
-        <a href="#about" class="nav-link text-white hover:text-blue-500">About</a>
-        <div class="relative group">
-          <a href="#menu" class="nav-link text-white hover:text-blue-500 focus:outline-none flex items-center">
-            Menu 
-            <i id="arrow-icon" class="fa-solid fa-caret-down ml-1 transition-transform duration-300 group-hover:rotate-180"></i>
-          </a>
-          <ul id="dropdownMenu" class="hidden absolute mt-2 bg-white shadow-lg rounded-lg w-40 px-2 py-2 group-hover:block">
-            <li><a href="#" class="block px-4 py-2 rounded-lg hover:bg-blue-500 hover:text-white">Item 1</a></li>
-            <li><a href="#" class="block px-4 py-2 rounded-lg hover:bg-blue-500 hover:text-white">Item 2</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="hidden md:flex md:items-center">
-        <div class="relative">
-          <button id="userDropdownButton" class="text-white hover:text-blue-500 focus:outline-none">
-            <i class="fa-solid fa-circle-info text-lg"></i>
-          </button>
-          <ul id="userDropdownMenu" class="hidden absolute mt-2 -ml-36 bg-white shadow-lg rounded-lg w-40 px-2 py-2">
-            <li><a href="#" class="block px-4 py-2 rounded-lg hover:bg-blue-500 hover:text-white">Sign In</a></li>
-            <li><a href="#" class="block px-4 py-2 rounded-lg hover:bg-blue-500 hover:text-white">Sign Up</a></li>
-          </ul>
-        </div>
-      </div>
     </div>
-    <div id="mobileMenu" class="hidden lg:hidden">
-      <div class="px-3 pb-2">
-       <div class="bg-gray-800  rounded-lg flex flex-col items-center justify-center space-y-2 px-4 py-2">
-        <a href="#home" class="nav-link text-white hover:text-blue-500">Home</a>
-        <a href="#blog" class="nav-link text-white hover:text-blue-500">Blog</a>
-        <a href="#about" class="nav-link text-white hover:text-blue-500">About</a>
-        <a href="#menu" id="mobileDropdownMenuButton" class="nav-link text-white hover:text-blue-500 focus:outline-none relative">
-          Menu <i id="mobile-arrow-icon" class="fa-solid fa-caret-down"></i>
-        </a>
-        <div class="relative">
-            <ul id="mobileDropdownMenu" class="hidden bg-white shadow-lg rounded-lg w-80 px-2 py-2 text-center">
-                <li><a href="#" class="block px-4 py-2 rounded-lg hover:bg-blue-500 hover:text-white">Item 1</a></li>
-                <li><a href="#" class="block px-4 py-2 rounded-lg hover:bg-blue-500 hover:text-white">Item 2</a></li>
-            </ul>
+
+    <!-- ScrollToTop -->
+    <button id="scrollToTop" 
+        class="hidden fixed bottom-6 right-24 z-[9999999] bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19V5M5 12l7-7 7 7" />
+        </svg>        
+    </button>
+
+    <!-- Chatbot Container -->
+    <div id="chatbot-container" class="fixed bottom-24 right-6 w-80 bg-white rounded-lg shadow-2xl border border-gray-200 hidden z-[9999999] flex-col">
+        <!-- Chatbot Header -->
+        <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-t-lg flex justify-between items-center">
+            <h2 class="font-bold text-lg">AI Support Assistant</h2>
+            <button id="close-chatbot" class="hover:bg-white/20 rounded-full p-1 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+            </button>
         </div>
-          <button id="mobileUserDropdownButton" class="text-white hover:text-blue-500 focus:outline-none">
-            <i class="fa-solid fa-circle-info text-lg"></i>
-          </button> 
-          <div class="relative">
-          <ul id="mobileUserDropdownMenu" class="hidden mt-2 bg-white shadow-lg rounded-lg w-80 px-2 py-2 text-center">
-            <li><a href="#" class="block px-4 py-2 rounded-lg hover:bg-blue-500 hover:text-white">Sign In</a></li>
-            <li><a href="#" class="block px-4 py-2 rounded-lg hover:bg-blue-500 hover:text-white">Sign Up</a></li>
-          </ul>
+
+        <!-- Chatbot Messages -->
+        <div id="chatbot-messages" class="flex-grow p-4 overflow-y-auto space-y-3">
+            <div class="flex items-start mb-4">
+                <img src="https://via.placeholder.com/40" class="w-8 h-8 rounded-full mr-3" alt="Bot Avatar">
+                <div class="bg-blue-600 p-3 rounded-lg max-w-[70%]">
+                    <p>Hello! I'm your AI assistant. How can I help you today?</p>
+                </div>
+            </div>
         </div>
-       </div>
-      </div>
     </div>
-  </nav>
 
-  
-  
-  
-  
-  <script>
-    window.addEventListener('scroll', function() {
-      const navbar = document.getElementById('navbar');
-      if (window.scrollY > 0) { 
-        navbar.classList.add('blurred');
-      } else {
-        navbar.classList.remove('blurred');
-      }
-    });
-  
-    document.getElementById('menu-button').addEventListener('click', function() {
-      const mobileMenu = document.getElementById('mobileMenu');
-      const menuIcon = document.getElementById('menu-icon');
-      
-      // Toggle the mobile menu visibility
-      mobileMenu.classList.toggle('hidden');
-      
-      if (menuIcon.classList.contains('fa-bars')) {
-          menuIcon.classList.remove('fa-bars');
-          menuIcon.classList.add('fa-xmark');
-        } else {
-          menuIcon.classList.remove('fa-xmark');
-          menuIcon.classList.add('fa-bars');
-        }
-    });
-  
-    document.getElementById('userDropdownButton').addEventListener('click', function() {
-      document.getElementById('userDropdownMenu').classList.toggle('hidden');
-    });
-  
-    document.getElementById('mobileDropdownMenuButton').addEventListener('click', function() {
-    const mobileArrowIcon = document.getElementById('mobile-arrow-icon');
-    document.getElementById('mobileDropdownMenu').classList.toggle('hidden');
-    if (mobileArrowIcon.classList.contains('fa-caret-down')) {
-      mobileArrowIcon.classList.remove('fa-caret-down');
-      mobileArrowIcon.classList.add('fa-caret-up');
-    } else {
-      mobileArrowIcon.classList.remove('fa-caret-up');
-      mobileArrowIcon.classList.add('fa-caret-down');
-    }
-  });
-  
-    document.getElementById('mobileUserDropdownButton').addEventListener('click', function() {
-      document.getElementById('mobileUserDropdownMenu').classList.toggle('hidden');
-    });
+    <!-- Footer -->
+    <footer class="bg-black py-6 text-center">
+        <div class="container mx-auto">
+            <p>&copy; 2024 AksaGroup. All Rights Reserved.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="hover:text-blue-500"><i class="fab fa-github"></i></a>
+                <a href="#" class="hover:text-blue-500"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="hover:text-blue-500"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
 
-    // Activate the smooth scroll and active state
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', function(e) {
-        // Smooth Scroll
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-        
-        // Remove active class from all links
-        document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('text-blue-500'));
-        
-        // Add active class to the clicked link
-        this.classList.add('text-blue-500');
-      });
-    });
-  </script>
-  
-  
-  <div id="hero" class="flex items-center justify-center min-h-screen">
-  <!-- Hero -->
-  <div class="container mx-auto p-5">
-    <!-- Gambar untuk mode terang
-    <img src="img/Logo AV besar.png" alt="Logo AksaVisual" class="mx-auto mb-4 w-32 h-32 md:w-72 md:h-72 object-cover block dark:hidden"> -->
-    <!-- Gambar untuk mode gelap -->
-    <img src="img/Logo AV besar putih.png" alt="Logo AksaVisual" class="mx-auto mb-4 w-32 h-32 md:w-72 md:h-72 object-cover">
-    <h1 class="text-white text-xl md:text-3xl font-bold text-center uppercase p-3">Selamat Datang di Website AksaVisual<span class="text-blue-500">.</span></h1>
-    <p class="text-gray-600 dark:text-gray-400 text-center">Website AksaVisual Masih dalam masa perbaikan mohon di tunggu ya.</p>
-    <div class="flex items-center justify-center min-h-52 pt-5">
-        <a href="https://wa.me/6281216164768" target="_blank" class="bg-gradient-to-b from-blue-300 via-blue-400 to-blue-500 dark:from-blue-700 dark:via-blue-800 dark:to-blue-900 text-white font-bold py-2 px-4 rounded-full shadow-lg flex items-center justify-center space-x-2 hover:from-blue-400 hover:via-blue-500 hover:to-blue-600 dark:hover:from-blue-600 dark:hover:via-blue-700 dark:hover:to-blue-800 transition animate-click w-56">
-            <span>Hubungi Admin Disini</span>
-            <i class="fas fa-phone-alt"></i>
-        </a>
-    </div>
-  </div>
-  </div>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="styles/js/index.js"></script>
 </body>
 </html>
